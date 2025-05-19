@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="light-theme"> <!-- class on body to toggle theme -->
+    <div>
+        <!-- head section -->
+        <header class="sticky-navbar"> <!-- to make the navigation bar sticks on the top of the page -->
+            <div class="head-section">
+                <div>
+                    <h2>Book Management</h2>
+                    <p id="theme">⚽</p>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search Book or Author...">
+                    <button id="searchButton">Search</button>
+                </div>
+            </div>
+        </header>
+        <!-- main container to display books -->
+        <main>
+            <div class="books-container">
+                <div id="display-timer"></div>
+                <p id="books-count">All Books: 0</p>
+                <div id="book-display"></div>
+            </div>
+        </main>
+        <!-- form section  -->
+        <section>
+            <button class="open-button" id="openForm">Open Form</button>
+
+            <div class="input-section" id="bookForm">
+                <h4>Add Book</h4>
+                <label for="author"> Author Name:</label>
+                <input id="author" name="author" type="text"
+                placeholder="Enter the author name">
+    
+                <label for="title">Book Title:</label>
+                <input id="title" name="title" type="text" placeholder="Enter the book title">
+    
+                <label for="genre">Genre:</label>
+                <input id="genre" name="genre" type="text" placeholder="Enter the genre">
+
+                <input type="file" id="file-input" class="file-input" accept="image/*">
+                <button class="upload-button" id="upload-button">Choose Image</button>
+                <p class="status-text" id="status-text"></p>
+                
+                <div class="preview-container">
+                    <h2>Preview:</h2>
+                    <img id="preview-image" class="preview-image" alt="Image preview">
+                </div>
+
+                <button id="addBook">Add</button>
+                <button id="closeForm">Close</button>
+            </div>
+        </section>
+    </div>
+
+
+    <script src="greet.js"></script>
+    <script src="dataset.js"></script>
+    <script src="render.js"></script>
+    <script src="theme.js"></script>
+    <script src="timer.js"></script>
+    <script src="searchBook.js"></script>
+    <script src="openBookForm.js"></script>
+</body>
+</html>
